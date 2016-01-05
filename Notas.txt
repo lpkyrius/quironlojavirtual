@@ -1,0 +1,16 @@
+Empresa.DeptoSistema.Dominio
+Quiron.LojaVirtual.Dominio - Class Library
+
+Dominio - Entidade
+
+Quiron.LojaVirtual.Web - ASP.Net MVC 5
+
+Quiron.LojaVirtual.UnitTest
+
+http://quironesportes.azurewebsites.net/
+
+192.168.0.22\MSSQLIABAS
+- User = ideias
+- Pwd = ideias#192341
+
+

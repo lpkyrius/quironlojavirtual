@@ -1,0 +1,37 @@
+05/01/2016
+Github
+https://github.com/
+
+@lpkyrius lpkyrius@hotmail.com
+123456lp
+https://github.com/lpkyrius/curso.git
+
+https://github.com/lpkyrius/quironlojavirtual
+
+
+
+---------------------------------------------------------------------------------------------------
+
+28/12/2015
+
+Adicionar referencias	LojaVirtual.Web recebe LojaVirtual.Dominio
+						LojaVirtual.UnitTest recebe LojaVirtual.Dominio e LojaVirtual.Web
+
+No Package Manager Console: instalar nos projetos Dominio e UnitTest o Install-Package Microsoft.Aspnet.Mvc
+
+No Dominio adicionar referencia a Assemblies > Frameworks > System.ComponentModel.DataAnnotations
+
+---------------------------------------------------------------------------------------------------
+
+Empresa.DeptoSistema.Dominio
+Quiron.LojaVirtual.Dominio - Class Library
+
+Dominio - Entidade
+
+Quiron.LojaVirtual.Web - ASP.Net MVC 5
+
+Quiron.LojaVirtual.UnitTest
+
+http://quironesportes.azurewebsites.net/
+
+
