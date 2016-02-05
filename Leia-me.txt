@@ -1,4 +1,21 @@
 
+Aula 6
+05/02/2016
+Referenciar o Entity Framework com o Package Manager Console
+Criando a string de conexão no Web.Config
+Criou o EfDbContext (classe para todos os dbsets)
+Criando o ProdutosController no Quiron.LojaVirtual.Web
+
+
+---------------------------------------------------------------------------------------------------
+Aula 5
+final de janeiro
+Criando a conexão com o banco (localdb)\ProjectsV12 e criação da Entidade Produto para vínculo 
+
+---------------------------------------------------------------------------------------------------
+
+
+
 Aula 4
 05/01/2016
 
@@ -16,6 +33,10 @@ https://github.com/
 https://github.com/lpkyrius/curso.git
 
 https://github.com/lpkyrius/quironlojavirtual
+
+link da aula:
+https://github.com/devmedialoja/quironlojavirtual
+
 
 devmedia2014@outlook.com brasil2014
 
