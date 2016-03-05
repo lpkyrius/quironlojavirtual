@@ -15,7 +15,8 @@ namespace Quiron.LojaVirtual.Web.Models
         public int TotalPaginas
         {
 
-            get {return (int)Math.Ceiling((decimal)ItensTotal / ItensPorPagina);} // Ceiling para arredondar para cima o resultado da divisão
+            get { return (int)Math.Ceiling((decimal)ItensTotal / ItensPorPagina); } // Ceiling para arredondar para cima o resultado da divisão
         }
 
     }
+}
