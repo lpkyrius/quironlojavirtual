@@ -1,82 +1,54 @@
+Aula 9
+14/03/016
+Teste da paginação
 
 ---------------------------------------------------------------------------------------------------
 Aula 8
 01/03/2016
-
-
+Criando as Classes de Paginação
 ---------------------------------------------------------------------------------------------------
-
 Aula 7
 20/01/2016
-
 ---------------------------------------------------------------------------------------------------
-
 Aula 6
 05/02/2016
 Referenciar o Entity Framework com o Package Manager Console
 Criando a string de conexão no Web.Config
 Criou o EfDbContext (classe para todos os dbsets)
 Criando o ProdutosController no Quiron.LojaVirtual.Web
-
-
 ---------------------------------------------------------------------------------------------------
 Aula 5
 final de janeiro
 Criando a conexão com o banco (localdb)\ProjectsV12 e criação da Entidade Produto para vínculo 
-
 ---------------------------------------------------------------------------------------------------
-
-
-
 Aula 4
 05/01/2016
-
 https://devmedialoja.visualstudio.com
-
 ---------------------------------------------------------------------------------------------------
-
 Aula 3
 05/01/2016
 Github
 https://github.com/
-
 @lpkyrius lpkyrius@hotmail.com
 123456lp
 https://github.com/lpkyrius/curso.git
-
 https://github.com/lpkyrius/quironlojavirtual
-
 link da aula:
 https://github.com/devmedialoja/quironlojavirtual
-
-
 devmedia2014@outlook.com brasil2014
-
 ---------------------------------------------------------------------------------------------------
-
 Aula 2
 28/12/2015
-
 Adicionar referencias	LojaVirtual.Web recebe LojaVirtual.Dominio
 						LojaVirtual.UnitTest recebe LojaVirtual.Dominio e LojaVirtual.Web
-
 No Package Manager Console: instalar nos projetos Dominio e UnitTest o Install-Package Microsoft.Aspnet.Mvc
-
 No Dominio adicionar referencia a Assemblies > Frameworks > System.ComponentModel.DataAnnotations
-
 ---------------------------------------------------------------------------------------------------
-
 Aula 1
 28/12/20015
 Empresa.DeptoSistema.Dominio
 Quiron.LojaVirtual.Dominio - Class Library
-
 Dominio - Entidade
-
 Quiron.LojaVirtual.Web - ASP.Net MVC 5
-
 Quiron.LojaVirtual.UnitTest
-
 http://quironesportes.azurewebsites.net/
-
-

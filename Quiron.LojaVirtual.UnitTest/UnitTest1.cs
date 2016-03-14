@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Linq;
+using System.Web;
 using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Quiron.LojaVirtual.Web.HtmlHelpers;
+using Quiron.LojaVirtual.Web.Models;
 
 namespace Quiron.LojaVirtual.UnitTest
 {
@@ -41,25 +44,29 @@ namespace Quiron.LojaVirtual.UnitTest
         }
 
 
-
-
-        /*
         [TestMethod]
         public void TestarSeAPaginacaoEstaSendoGeradaCorretamente()
         {
-            //Arrange
+            //Arrange ----------------------------------------------
 
             HtmlHelper html = null;
+
             Paginacao paginacao = new Paginacao
             {
                 PaginaAtual = 2,
                 ItensPorPagina = 10,
                 ItensTotal = 28
             };
+
             Func<int, string> paginaUrl = i => "Pagina" + i;
-            //Act
+
+            //Act --------------------------------------------------
+
             MvcHtmlString resultado = html.PageLinks(paginacao, paginaUrl);
-            //Assert
+
+            //Assert -----------------------------------------------
+
+            // Das varias funções do Assert, pego a que verifica se o resultado "é igual" a
             Assert.AreEqual(
 
                 @"<a class=""btn btn-default"" href=""Pagina1"">1</a>"
@@ -68,6 +75,6 @@ namespace Quiron.LojaVirtual.UnitTest
 
                 );
         }
-        */
+      
     }
 }
