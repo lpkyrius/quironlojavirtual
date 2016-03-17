@@ -1,6 +1,23 @@
+
+
+Aula 8
+10/03/2016
+View Model
+View Result
+finalizada em 16/3
+
+---------------------------------------------------------------------------------------------------
 Aula 9
 14/03/016
 Teste da paginação
+
+View > Other Windows > Package Manager Console 
+Selecionar o projeto Quiron.LojaVirtual.UnitTest 
+E digitar  Install-Package Microsoft.AspNet.Mvc
+
+
+http://goo.gl/MuuDo8
+http://goo.gl/Y45pjx
 
 ---------------------------------------------------------------------------------------------------
 Aula 8
