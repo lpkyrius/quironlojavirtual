@@ -1,6 +1,13 @@
 
+Aula 11
+17/03/2016
+Alteração de rota
+Paginação Amigável
+Instalação do Bootstrap
 
-Aula 8
+---------------------------------------------------------------------------------------------------
+
+Aula 10
 10/03/2016
 View Model
 View Result
