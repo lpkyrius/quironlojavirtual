@@ -1,4 +1,11 @@
 
+
+Aula 12
+20/03/2016
+Style Bootstrap e Partial View - Curso de ASP.NET MVC - Criando uma Loja Virtual
+Leia mais em: Style Bootstrap e Partial View - Curso de ASP.NET MVC - Criando uma Loja Virtual - Aula 12
+
+--------------------------------------------------------------------------------------------------
 Aula 11
 17/03/2016
 Alteração de rota
