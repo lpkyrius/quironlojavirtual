@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace Quiron.LojaVirtual.Web
@@ -13,17 +9,59 @@ namespace Quiron.LojaVirtual.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute(
-                name: null,
-                url: "Pagina{pagina}",
-                defaults: new {controller = "Vitrine", Action = "ListaProdutos" }
-                );
+            // a ideia é trazer as rotas da mais simples para a mais complexas
+            // apenas / trará todas as categorias
+            // Pagina2 trará a página 2 de todas as categorias
+            // Futebol trará a 1a pagina da categoria futebol]
+            // Futebol/Pagina2 trará a página 2 da categoria futebol
+            // @"\d"  é uma regular expression para que só aceite números inteiros
 
-            routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            );
+            // 1 - Início, lista todas as categorias
+
+            routes.MapRoute(null,
+              "",
+              new {
+                  Controller = "Vitrine",
+                  action = "ListaProdutos",
+                  categoria = (string)null,
+                  pagina = 1 });
+
+            // 2 - A página para todas as categorias
+
+            routes.MapRoute(null,
+                  "Pagina{pagina}",
+                  new {
+                      Controller = "Vitrine",
+                      Action = "ListaProdutos",
+                      categoria = (string) null},
+                    new { pagina = @"\d" });
+
+            // 3 - 1a página de uma categoria
+
+
+            routes.MapRoute(null,
+                "{categoria}", 
+                new{
+                    Controller = "Vitrine",
+                    action = "ListaProdutos",
+                    pagina = 1
+                });
+
+            // 4 - A página x da Categoria x
+
+            routes.MapRoute(null,
+                  "{categoria}Pagina{pagina}",
+                  new
+                  {
+                      Controller = "Vitrine",
+                      Action = "ListaProdutos"
+                  },
+                    new { pagina = @"\d" });
+
+            // Final - Default
+
+            routes.MapRoute(null, "{controller}/{action}");
+
         }
     }
 }

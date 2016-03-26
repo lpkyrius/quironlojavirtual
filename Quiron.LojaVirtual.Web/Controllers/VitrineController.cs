@@ -13,7 +13,7 @@ namespace Quiron.LojaVirtual.Web.Controllers
         private Dominio.Repositorio.ProdutosRepositorio _repositorio;
         public int ProdutosPorPagina = 8; // Pode ser um parâmetro ou por o valor no webconfig
         // GET: Vitrine
-        public ViewResult ListaProdutos(int Pagina = 1)
+        public ViewResult ListaProdutos(string categoria, int Pagina = 1)
 
         {
             _repositorio = new Dominio.Repositorio.ProdutosRepositorio();
@@ -22,8 +22,10 @@ namespace Quiron.LojaVirtual.Web.Controllers
             {
                 //feito o skip dos registros exibidos nas paginas anteriores, agora pega os n produtos que devem ser exibidos nesta pagina (atual)
                 // recebe a página que vai exibir, multiplca para pegar a quantidade (por pagina) que deve descosiderar pois já foram exibidos nas paginas anteriores
+                // na primeira vez, categoria vai vir nulo
 
                 Produtos = _repositorio.Produtos
+                .Where(p => p.Categoria == null || p.Categoria == categoria)
                 .OrderBy(p => p.Descricao)
                 .Skip((Pagina - 1) * ProdutosPorPagina)
                 .Take(ProdutosPorPagina),
@@ -33,7 +35,9 @@ namespace Quiron.LojaVirtual.Web.Controllers
                     PaginaAtual = Pagina,
                     ItensPorPagina = ProdutosPorPagina,
                     ItensTotal = _repositorio.Produtos.Count()
-                }
+                },
+
+                CategoriaAtual = categoria
 
             };
 
