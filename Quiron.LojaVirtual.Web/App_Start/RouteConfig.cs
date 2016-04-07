@@ -16,51 +16,30 @@ namespace Quiron.LojaVirtual.Web
             // Futebol/Pagina2 trará a página 2 da categoria futebol
             // @"\d"  é uma regular expression para que só aceite números inteiros
 
-            // 1 - Início, lista todas as categorias
+            // 1 - Home
 
+            routes.MapRoute(null, "", new { controller = "Vitrine", action = "ListaProdutos", categoria = (string)null, pagina = 1 });
+
+
+
+            // 2 - 
             routes.MapRoute(null,
-              "",
-              new {
-                  Controller = "Vitrine",
-                  action = "ListaProdutos",
-                  categoria = (string)null,
-                  pagina = 1 });
-
-            // 2 - A página para todas as categorias
-
-            routes.MapRoute(null,
-                  "Pagina{pagina}",
-                  new {
-                      Controller = "Vitrine",
-                      Action = "ListaProdutos",
-                      categoria = (string) null},
-                    new { pagina = @"\d" });
-
-            // 3 - 1a página de uma categoria
+                "Pagina{pagina}",
+                new { controller = "Vitrine", action = "ListaProdutos", categoria = (string)null }, new { pagina = @"\d+" });
 
 
             routes.MapRoute(null,
-                "{categoria}", 
-                new{
-                    Controller = "Vitrine",
-                    action = "ListaProdutos",
-                    pagina = 1
-                });
+                "{categoria}", new { controller = "Vitrine", action = "ListaProdutos", pagina = 1 });
 
-            // 4 - A página x da Categoria x
+
 
             routes.MapRoute(null,
-                  "{categoria}Pagina{pagina}",
-                  new
-                  {
-                      Controller = "Vitrine",
-                      Action = "ListaProdutos"
-                  },
-                    new { pagina = @"\d" });
+                "{categoria}/Pagina{pagina}", new { controller = "Vitrine", action = "ListaProdutos" }, new { pagina = @"\d+" });
 
-            // Final - Default
+
 
             routes.MapRoute(null, "{controller}/{action}");
+
 
         }
     }
