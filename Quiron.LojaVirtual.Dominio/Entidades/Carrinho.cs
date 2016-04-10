@@ -41,7 +41,7 @@ namespace Quiron.LojaVirtual.Dominio.Entidades
 
         public decimal ObterValorTotal()
         {
-            _ItemCarrinho.Sum(e => e.Produto.Preco * e.Quantidade);
+            return _ItemCarrinho.Sum(e => e.Produto.Preco * e.Quantidade);
         }
 
         // Limpara o carrinho
