@@ -116,7 +116,7 @@ namespace Quiron.LojaVirtual.UnitTest
 
             carrinho.AdicionarItem(produto2, 1);
 
-            carrinho.Remover(produto2); // vou remover somente o produto 2
+            carrinho.RemoverItem(produto2); // vou remover somente o produto 2
 
             Assert.AreEqual(carrinho.ItensCarrinho.Where(c => c.Produto == produto2).Count(), 0); // teste se tem zero porque removi tudo
 
@@ -183,6 +183,7 @@ namespace Quiron.LojaVirtual.UnitTest
             Assert.AreEqual(carrinho.ItensCarrinho.Count(), 0);
 
         }
+
     }
 
 }
