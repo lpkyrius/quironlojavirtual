@@ -1,5 +1,6 @@
 ﻿using Quiron.LojaVirtual.Dominio.Entidades;
 using Quiron.LojaVirtual.Dominio.Repositorio;
+using Quiron.LojaVirtual.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -54,7 +55,16 @@ namespace Quiron.LojaVirtual.Web.Controllers
                 ObterCarrinho().RemoverItem(produto);
             }
 
-            return RedirectToAction("Index", new { returnUrl });
+            return RedirectToAction("Index", new { returnUrl });    
+        }
+
+        public ViewResult Index (string returnurl)
+        {
+            return View(new CarrinhoViewModel
+            {
+                Carrinho = ObterCarrinho(),
+                ReturUrl = returnurl
+            });
         }
     }
 }
