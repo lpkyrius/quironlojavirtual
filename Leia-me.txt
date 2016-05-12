@@ -1,3 +1,8 @@
+Aula 20  
+12/05/2016
+resumo do carrinho...
+
+--------------------------------------------------------------------------------------------------
 Aula 19  
 06/05/2016
 Carrinho ViewModel - Curso de ASP.NET MVC - Criando uma Loja Virtual - Aula 19
